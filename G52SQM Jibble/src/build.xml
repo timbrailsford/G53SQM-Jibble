@@ -1,1 +1,27 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
+<project name="G52SQM Jibble" default="compile" basedir="." >
+	
+	<target name="clean">
+		<delete dir="build"/>
+	</target>	
+	
+	<target name="create" depends="clean">
+		<mkdir dir="build"/>
+	</target>
+	
+	<target name="compile" depends="create">
+		<mkdir dir="build/classes"/>
+		<javac srcdir="/Users/jiemmiehean/git/local-G52JibbleSQM/G52SQM Jibble/src/g53sqm/jibble"
+			destdir="build/classes">
+			<include name="**/*.java"/>
+			<exclude name="**/Example.java"/>
+		</javac>
+	</target>
+	
+	<target name="jar" depends="compile">
+		<mkdir dir="build/jar"/>
+			<jar destfile="build/jar/Jibble.jar"> basedir="build/classes" 
+			</jar>
+	</target>
+	
+</project>
