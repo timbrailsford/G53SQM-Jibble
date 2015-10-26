@@ -42,6 +42,10 @@ public class WebServerMain {
             }
         }
         
+        System.out.println("Jibble web server (modified by Hean Boon Kyeng Jiemmie, 010870 for G53SQM)");
+        System.out.println("Root directory: " + WebServerConfig.DEFAULT_ROOT_DIRECTORY);
+        System.out.println("Port: " + port);
+        
         try {
             WebServer server = new WebServer(rootDir, port);
             server.activate();
