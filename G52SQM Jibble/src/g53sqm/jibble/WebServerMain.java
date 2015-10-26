@@ -21,6 +21,9 @@ $Id: WebServerMain.java,v 1.2 2004/02/01 13:37:35 pjm2 Exp $
  * 
  * @author Copyright Paul Mutton, http://www.jibble.org/
  */
+
+import g53sqm.jibble.*;
+
 public class WebServerMain {
 
     public static void main(String[] args) {
