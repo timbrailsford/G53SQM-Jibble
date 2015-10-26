@@ -1,27 +1,30 @@
 <?xml version="1.0"?>
 <project name="G52SQM Jibble" default="jar" basedir="." >
-	
+
 	<target name="clean">
 		<delete dir="build"/>
-	</target>	
-	
+	</target>
+
 	<target name="create" depends="clean">
 		<mkdir dir="build"/>
 	</target>
-	
+
 	<target name="compile" depends="create">
 		<mkdir dir="build/classes"/>
-		<javac srcdir="/Users/jiemmiehean/git/local-G52JibbleSQM/G52SQM Jibble/src/g53sqm/jibble"
+		<javac srcdir="/Users/jiemmiehean/git/local-G52JibbleSQM/G52SQM Jibble/src"
 			destdir="build/classes" includeantruntime="true">
 			<include name="**/*.java"/>
 			<exclude name="**/Example.java"/>
 		</javac>
 	</target>
-	
+
 	<target name="jar" depends="compile">
 		<mkdir dir="build/jar"/>
-			<jar destfile="/Users/jiemmiehean/git/local-G52JibbleSQM/G52SQM Jibble/src/build/classes/g53sqm/jibble/Jibble.jar" basedir="."> 
-			</jar>
+		<jar destfile="/Users/jiemmiehean/git/local-G52JibbleSQM/G52SQM Jibble/src/build/jar/jibble.jar" basedir="build/classes">
+			<manifest>
+				<attribute name="Main-Class" value="g53sqm.jibble.WebServerMain"/>
+            </manifest>
+		</jar>
 	</target>
-	
+
 </project>
