@@ -22,8 +22,6 @@ $Id: WebServerMain.java,v 1.2 2004/02/01 13:37:35 pjm2 Exp $
  * @author Copyright Paul Mutton, http://www.jibble.org/
  */
 
-import g53sqm.jibble.*;
-
 public class WebServerMain {
 
     public static void main(String[] args) {
@@ -32,7 +30,7 @@ public class WebServerMain {
         int port = WebServerConfig.DEFAULT_PORT;
         
         if (args.length > 0) {
-            rootDir = args[0];
+            rootDir = WebServerConfig.DEFAULT_ROOT_DIRECTORY +"/"+ args[0];
         }
         
         if (args.length > 1) {
