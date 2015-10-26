@@ -11,7 +11,7 @@
 
 	<target name="compile" depends="create">
 		<mkdir dir="build/classes"/>
-		<javac srcdir="/Users/jiemmiehean/git/local-G52JibbleSQM/G52SQM Jibble/src"
+		<javac srcdir="/Users/jiemmiehean/git/local-G52JibbleSQM/G52SQM Jibble"
 			destdir="build/classes" includeantruntime="true">
 			<include name="**/*.java"/>
 			<exclude name="**/Example.java"/>
@@ -24,6 +24,7 @@
 			<manifest>
 				<attribute name="Main-Class" value="g53sqm.jibble.WebServerMain"/>
             </manifest>
+				<fileset dir="/Users/jiemmiehean/git/local-G52JibbleSQM/G52SQM Jibble/src/webfiles"/>
 		</jar>
 	</target>
 
