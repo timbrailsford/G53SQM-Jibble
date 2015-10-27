@@ -16,6 +16,8 @@ $Id: WebServerConfig.java,v 1.2 2004/02/01 13:37:35 pjm2 Exp $
 */
 
 
+import java.io.File;
+import java.io.IOException;
 import java.util.*;
 
 /**
@@ -29,13 +31,18 @@ import java.util.*;
  */
 public class WebServerConfig {
     
-    private WebServerConfig() {
+    private WebServerConfig(){
         // Prevent the default constructor from being called.
     }
     
     public static final String VERSION = "<a href=\"http://www.jibble.org\">Jibble Web Server 1.0</a> - An extremely small Java web server";
     
     public static final String DEFAULT_ROOT_DIRECTORY = "/Users/jiemmiehean/git/local-G52JibbleSQM/G52SQM Jibble/src/webfiles";
+    
+    public static final File file = new File("webfiles");
+    
+    public static final String path = WebServerConfig.class.getCanonicalName();
+    
     public static final int DEFAULT_PORT = 8088;
     
     public static final String[] DEFAULT_FILES = new String[] {"index.html", "index.htm", "index.shtml", "index.shtm", "index.stm", "index.sht"};

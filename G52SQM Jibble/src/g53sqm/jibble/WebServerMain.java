@@ -1,4 +1,8 @@
 package g53sqm.jibble;
+
+import java.io.File;
+import java.io.IOException;
+
 /* 
 Copyright Paul James Mutton, 2001-2004, http://www.jibble.org/
 
@@ -24,13 +28,15 @@ $Id: WebServerMain.java,v 1.2 2004/02/01 13:37:35 pjm2 Exp $
 
 public class WebServerMain {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         
-        String rootDir = WebServerConfig.DEFAULT_ROOT_DIRECTORY;
+        String rootDir = WebServerConfig.file.getCanonicalPath();
+        
         int port = WebServerConfig.DEFAULT_PORT;
         
         if (args.length > 0) {
-            rootDir = WebServerConfig.DEFAULT_ROOT_DIRECTORY +"/"+ args[0];
+				rootDir = WebServerConfig.file.getCanonicalPath() +"/"+ args[0];
+				// TODO Auto-generated catch block
         }
         
         if (args.length > 1) {
@@ -43,7 +49,7 @@ public class WebServerMain {
         }
         
         System.out.println("Jibble web server (modified by Hean Boon Kyeng Jiemmie, 010870 for G53SQM)");
-        System.out.println("Root directory: " + WebServerConfig.DEFAULT_ROOT_DIRECTORY);
+        System.out.println("Root directory: " + rootDir);
         System.out.println("Port: " + port);
         
         try {

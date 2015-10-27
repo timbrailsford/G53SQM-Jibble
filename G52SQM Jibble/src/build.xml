@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<project name="G52SQM Jibble" default="jar" basedir="." >
+<project name="G52SQM Jibble" default="copy" basedir="." >
 
 	<target name="clean">
 		<delete dir="build"/>
@@ -26,6 +26,13 @@
             </manifest>
 				<fileset dir="/Users/jiemmiehean/git/local-G52JibbleSQM/G52SQM Jibble/src/webfiles"/>
 		</jar>
+	</target>
+	
+	<target name="copy" depends="jar">
+		<mkdir dir="build/jar/webfiles"/>
+			<copy todir="build/jar/webfiles">
+			    <fileset dir="/Users/jiemmiehean/git/local-G52JibbleSQM/G52SQM Jibble/src/webfiles"/>
+			</copy>
 	</target>
 
 </project>
