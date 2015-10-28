@@ -17,21 +17,20 @@
 			<exclude name="**/Example.java"/>
 		</javac>
 	</target>
-
+	
 	<target name="jar" depends="compile">
 		<mkdir dir="build/jar"/>
 		<jar destfile="/Users/jiemmiehean/git/local-G52JibbleSQM/G52SQM Jibble/src/build/jar/jibble.jar" basedir="build/classes">
 			<manifest>
 				<attribute name="Main-Class" value="g53sqm.jibble.WebServerMain"/>
             </manifest>
-				<fileset dir="/Users/jiemmiehean/git/local-G52JibbleSQM/G52SQM Jibble/src/webfiles"/>
 		</jar>
 	</target>
 	
 	<target name="copy" depends="jar">
 		<mkdir dir="build/jar/webfiles"/>
 			<copy todir="build/jar/webfiles">
-			    <fileset dir="/Users/jiemmiehean/git/local-G52JibbleSQM/G52SQM Jibble/src/webfiles"/>
+			    <fileset dir="/Users/jiemmiehean/git/local-G52JibbleSQM/G52SQM Jibble/webfiles"/>
 			</copy>
 	</target>
 
