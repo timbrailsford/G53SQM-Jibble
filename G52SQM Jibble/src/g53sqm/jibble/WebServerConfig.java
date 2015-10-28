@@ -41,8 +41,6 @@ public class WebServerConfig {
     
     public static final File file = new File("webfiles");
     
-    public static final String path = WebServerConfig.class.getCanonicalName();
-    
     public static final int DEFAULT_PORT = 8088;
     
     public static final String[] DEFAULT_FILES = new String[] {"index.html", "index.htm", "index.shtml", "index.shtm", "index.stm", "index.sht"};
