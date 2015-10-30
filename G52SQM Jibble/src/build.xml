@@ -14,7 +14,6 @@
 		<javac srcdir="/Users/jiemmiehean/git/local-G52JibbleSQM/G52SQM Jibble"
 			destdir="build/classes" includeantruntime="true">
 			<include name="**/*.java"/>
-			<exclude name="**/Example.java"/>
 		</javac>
 	</target>
 	

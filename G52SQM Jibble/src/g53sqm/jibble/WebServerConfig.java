@@ -37,8 +37,6 @@ public class WebServerConfig {
     
     public static final String VERSION = "<a href=\"http://www.jibble.org\">Jibble Web Server 1.0</a> - An extremely small Java web server";
     
-    public static final String DEFAULT_ROOT_DIRECTORY = "/Users/jiemmiehean/git/local-G52JibbleSQM/G52SQM Jibble/src/webfiles";
-    
     public static final File file = new File("webfiles");
     
     public static final int DEFAULT_PORT = 8088;
